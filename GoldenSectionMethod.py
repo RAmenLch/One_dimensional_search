@@ -1,8 +1,5 @@
-def f(x):
-    return x*x + 2*x
-
 #黄金分割法,f为搜索的函数,interval 为搜索的区间
-def GoldenSectionMethod(f,interval):
+def GSM(f,interval):
     GAMMA = (5**0.5-1)/2
     e = 10**-8
     alpha = float(interval[0])
@@ -42,5 +39,7 @@ def GoldenSectionMethod(f,interval):
 
 
 if __name__ == '__main__':
-    a = GoldenSectionMethod(f,(-3,5))
+    def f(x):
+        return x*x + 2*x
+    a = GSM(f,(-3,5))
     print(a)

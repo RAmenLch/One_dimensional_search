@@ -3,7 +3,7 @@ def f(x):
 def fdx(x):
     return 8*(x**3) - 12*x*x + 4*x + 3
 def fddx(x):
-    return 24*x*x - 24*x
+    return 24*x*x - 24*x + 4
 
 def f7(x):
     return x**3 - 2*x*x + x - 1
@@ -34,6 +34,7 @@ def NewtonMethod(fdx,fddx,ld):
         raise ArithmeticError('此初值不收敛')
 
 if __name__ == '__main__':
-    ld = 5
-    a = NewtonMethod(f7,f7dx,ld)
+    ld = 2
+    print("ld",ld)
+    a = NewtonMethod(fdx,fddx,ld)
     print(a)

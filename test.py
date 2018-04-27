@@ -1,7 +1,7 @@
 from sympy import *
 
 
-
+'''
 def f(x1,x2):
     return 100*((x2-x1**2)**2) + (1-x1)**2
 
@@ -16,10 +16,12 @@ print(a)
 print(b)
 
 
-'''
-def f(x1,x2):
-    return 100*((x2-x1**2)**2) + (1-x1)**2
 
+def f(x1,x2):
+    return 3*x1*x1+2*x1 +3*x2*x2 -4*x2
+'''
+def f(x1,x2,x3):
+        return x1**2 -2*x1*x2 + 2*x2**2 + x3**2 - x1*x3 + x1 + 3*x2 - x3
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -60,4 +62,3 @@ ax.contour(X, Y, Z, zdim = 'z', offset = -2, cmap = 'rainbow')
 ax.set_zlim(0, 100)
 
 plt.show()
-'''
